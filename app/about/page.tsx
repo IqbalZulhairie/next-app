@@ -47,11 +47,11 @@ const AboutPage = () => {
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <h1 className="max-w-xl text-4xl font-black tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
-              We build digital experiences that feel <span className="text-indigo-600">human</span>.
+              We build software that makes ambitious ideas <span className="text-indigo-600">real</span>.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-slate-600">
-              Our team helps brands and businesses turn ideas into intuitive products, sharper
-              stories, and measurable momentum through thoughtful design and execution.
+              Nexora Labs helps businesses plan, design, and build websites, mobile applications,
+              cloud systems, and digital products that are ready to grow.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -110,9 +110,8 @@ const AboutPage = () => {
             <h2 className="mt-4 text-3xl font-bold text-slate-900">Small team. Bold thinking.</h2>
           </div>
           <p className="text-lg leading-8 text-slate-600">
-            We started with a simple idea: great digital work should feel effortless for the people
-            using it and rewarding for the teams behind it. That philosophy now shapes everything we
-            design, build, and improve.
+            We started with a simple idea: software should solve a real problem and feel effortless
+            to use. That philosophy shapes every product we plan, design, build, and improve.
           </p>
         </div>
       </section>
@@ -172,6 +171,41 @@ const AboutPage = () => {
                 <p className="text-base leading-7 text-slate-200">{step}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-4 md:px-10">
+        <div className="flex flex-wrap items-center justify-center gap-6 rounded-full border border-slate-200 bg-white px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 shadow-sm">
+          <span>Northstar</span>
+          <span>Vanta</span>
+          <span>Luma</span>
+          <span>Horizon</span>
+          <span>Verve</span>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+        <div className="grid gap-8 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[1.1fr_0.9fr] md:p-10">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Testimonials</p>
+            <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
+              We help teams move with confidence.
+            </h2>
+          </div>
+
+          <div className="rounded-3xl bg-slate-50 p-6">
+            <p className="text-lg leading-8 text-slate-700">
+              “Their process brought clarity to an idea we had been circling for months. The end
+              result felt sharp, intentional, and immediately useful.”
+            </p>
+            <div className="mt-6 flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500" />
+              <div>
+                <p className="font-semibold text-slate-900">Emma Collins</p>
+                <p className="text-sm text-slate-500">Founder, Northstar Studio</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

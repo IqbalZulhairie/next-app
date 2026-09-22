@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Company location
+
+The `/location` page uses the Google Maps Embed API. Add these values to `.env.local` to show the live map and set the company address:
+
+```bash
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+NEXT_PUBLIC_COMPANY_LOCATION=Your Company, Manila, Philippines
+```
+
+Enable the Maps Embed API for the key in Google Cloud Console and restrict the key to this app's domains. Without the key, the page shows a setup state and the directions link still opens Google Maps.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

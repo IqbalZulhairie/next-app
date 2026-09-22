@@ -1,69 +1,55 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const services = [
+  { number: "01", title: "Web development", text: "Fast, accessible websites and platforms built for real business goals." },
+  { number: "02", title: "Mobile applications", text: "Reliable iOS and Android experiences that keep customers connected." },
+  { number: "03", title: "Product engineering", text: "From first prototype to scalable product, we turn ideas into software." },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="home-page">
+      <section className="home-hero">
+        <div className="home-hero__content">
+          <p className="eyebrow">Software house / Manila + remote</p>
+          <h1>We build the software that moves business forward.</h1>
+          <p className="home-hero__copy">
+            Nexora Labs partners with ambitious teams to design, develop, and
+            scale websites, mobile apps, and digital products people rely on.
           </p>
+          <div className="home-actions">
+            <Link className="home-button home-button--dark" href="/about/contact">
+              Start a project <span aria-hidden="true">↗</span>
+            </Link>
+            <Link className="home-text-link" href="/about">Explore our work <span aria-hidden="true">→</span></Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="home-hero__signal" aria-hidden="true">
+          <span>CODE</span><strong>+</strong><span>CLARITY</span>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="home-services">
+        <div className="home-section-intro">
+          <p className="eyebrow">What we do</p>
+          <h2>Technology with a point of view.</h2>
+        </div>
+        <div className="service-list">
+          {services.map((service) => (
+            <article className="service-item" key={service.number}>
+              <span>{service.number}</span>
+              <div><h3>{service.title}</h3><p>{service.text}</p></div>
+              <span className="service-arrow" aria-hidden="true">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-statement">
+        <p className="eyebrow">Built for the next step</p>
+        <h2>Good software should feel simple, even when the problem is complex.</h2>
+        <Link className="home-button home-button--light" href="/about/contact">Let&apos;s talk <span aria-hidden="true">↗</span></Link>
+      </section>
+    </main>
   );
 }
