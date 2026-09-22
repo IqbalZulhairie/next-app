@@ -32,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <nav className="site-nav" aria-label="Main navigation">
             <Link href="/about">About</Link>
             <Link href="/about/contact">Contact</Link>
+            <Link href="/login">Login</Link>
             <Link className="site-nav__location" href="/location">
               <span>Location</span>
               <span aria-hidden="true">↗</span>
